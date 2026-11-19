@@ -60,7 +60,7 @@ Mods that break on the experimental branch, built against its own game files.
 | Fix | What it fixes | Type | Original | Commit |
 | --- | --- | --- | --- | --- |
 | `experimental/SeasonChallengesFix_P.pak` | The game crashes at launch: the mod ships release's season settings, which on experimental drop Season 7. Rebuilt on experimental's settings with the mod's one change, 5 active challenges. | Replacement | [Season Challenges Expanded](https://mod.io/g/drg/m/season-challenges-expanded) 1.2 | `75703545` |
-| `experimental/VanityEraserFix_P.pak` | The game crashes at load: the mod ships release's vanity settings (`GD_Vanity`), which on experimental drop the tattoo preview and two category icons. Experimental's settings with the mod's one change, no DLC-locked items. Not yet checked in game. | Patch over | [Vanity Restriction Eraser](https://mod.io/g/drg/m/vanity-restriction-eraser) 5.1.1 (5.0 too) | `d00aed0c` |
+| `experimental/VanityEraserFix_P.pak` | The game crashes at load: the mod ships release's vanity settings (`GD_Vanity`), which on experimental drop the tattoo preview and two category icons. Experimental's settings with the mod's one change, no DLC-locked items. Checked at load only: the game reaches the Space Rig with the mod and the fix; the vanity screens are not yet checked. | Patch over | [Vanity Restriction Eraser](https://mod.io/g/drg/m/vanity-restriction-eraser) 5.1.1 (5.0 too) | `d00aed0c` |
 
 Notes:
 
