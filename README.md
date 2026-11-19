@@ -56,3 +56,9 @@ Notes:
 - `BuyableMissions_P.pak` still needs [Miracle Mod Manager](https://mod.io/g/drg/m/miracle-mod-manager). The mod
   is required by all players, so everyone in the lobby runs this build in place of the mod.io one.
 - `CD2FrozenFix_P.pak`: Custom Difficulty 2 paints materials on each machine, so every player who runs CD2 wants it.
+
+## Original authors
+
+Each patch carries edited copies of the original mod's Blueprints, and `BuyableMissions_P.pak` is a full rebuild of its
+mod. They are here because the fixes would otherwise go unshipped, not to replace anyone's work: if you are the
+author of a mod listed above and want its fix or build taken down, open an issue and it will be removed.
