@@ -3,13 +3,16 @@
 Pak mods for Deep Rock Galactic that fix bugs and performance problems in other mods and in the game
 itself. Byte patches for the game's executable live in [drg-bitfixes](https://github.com/Elytras/drg-bitfixes).
 
+The top-level paks are for the release build. The paks in [`experimental/`](experimental) are for the
+experimental branch (build CL-165596) only: install them there and not on release.
+
 Every pak is compiled from C++ by AssetGen, in a private repo; the Commit column names the commit of the
 fix's source. All paks here were checked current against that repo's `main` at `9751dfad`.
 
 ## Install
 
 Install with [MINT](https://github.com/trumank/mint). Add a pak by its local path or by its raw URL,
-`https://github.com/Elytras/drg-pakfixes/raw/main/<Name>_P.pak`. Then place it as its row says:
+`https://github.com/Elytras/drg-pakfixes/raw/main/<Name>_P.pak` (`.../raw/main/experimental/<Name>_P.pak` for an experimental one). Then place it as its row says:
 
 - **Patch over:** the original mod stays installed. Put the fix **directly above** the original in the MINT
   list: the fix ships its own copy of some of the mod's files, and MINT keeps the copy of whichever mod is
@@ -49,6 +52,14 @@ Install with [MINT](https://github.com/trumank/mint). Add a pak by its local pat
 | `TemperatureNumberFix_P.pak` | Searched every widget once a second for the mission HUD, all session on the Space Rig (2 ms/s); reads it off the HUD actor. | Patch over | [Temperature Number](https://mod.io/g/drg/m/temperature-number) 1.1.6 | `988b0d3b` |
 | `TerrainSyncFix_P.pak` | Two multiplayer terrain desyncs: a client sees an alien egg without its egg-sack terrain, or keeps the Caretaker vault's placeholder terrain (it blocks shots, and standing on it drops you through the map). Host only. Install through MINT, never loose in `Paks`. | Base game | Base game | `43e1016a` |
 | `WeaponRangesFix_P.pak` | The bug check, ten times a second, walked every pawn of the level and restyled every flying one. It now lists the pawns once a second and works on the flying enemies it has cached. | Patch over | [Visible Weapon Ranges](https://mod.io/g/drg/m/visible-weapon-ranges) 2.0.1 | `89826240` |
+
+## Experimental fixes (CL-165596)
+
+Mods that break on the experimental branch, built against its own game files.
+
+| Fix | What it fixes | Type | Original | Commit |
+| --- | --- | --- | --- | --- |
+| `experimental/SeasonChallengesFix_P.pak` | The game crashes at launch: the mod ships release's season settings, which on experimental drop Season 7. Rebuilt on experimental's settings with the mod's one change, 5 active challenges. | Replacement | [Season Challenges Expanded](https://mod.io/g/drg/m/season-challenges-expanded) 1.2 | `303e3736` |
 
 Notes:
 
