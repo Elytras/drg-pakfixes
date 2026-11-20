@@ -4,7 +4,7 @@ Pak mods for Deep Rock Galactic that fix bugs and performance problems in other 
 itself. Byte patches for the game's executable live in [drg-bitfixes](https://github.com/Elytras/drg-bitfixes).
 
 The top-level paks are for the release build. The paks in [`experimental/`](experimental) are for the
-experimental branch (build CL-165596) only: install them there and not on release.
+experimental branch (built against CL-165596; the branch is now at CL-166125, which changed none of the files these paks ship) only: install them there and not on release.
 
 Every pak is compiled from C++ by AssetGen, in a private repo; the Commit column names the commit of the
 fix's source. All paks here were checked current against that repo's `main` at `9751dfad`.
@@ -54,7 +54,7 @@ Install with [MINT](https://github.com/trumank/mint). Add a pak by its local pat
 | `TerrainSyncFix_P.pak` | Two multiplayer terrain desyncs: a client sees an alien egg without its egg-sack terrain, or keeps the Caretaker vault's placeholder terrain (it blocks shots, and standing on it drops you through the map). Host only. Install through MINT, never loose in `Paks`. Release only: Season 7 (the experimental branch) fixes both in the game, so leave it off there. | Base game | Base game | `43e1016a` |
 | `WeaponRangesFix_P.pak` | The bug check, ten times a second, walked every pawn of the level and restyled every flying one. It now lists the pawns once a second and works on the flying enemies it has cached. | Patch over | [Visible Weapon Ranges](https://mod.io/g/drg/m/visible-weapon-ranges) 2.0.1 | `89826240` |
 
-## Experimental fixes (CL-165596)
+## Experimental fixes (CL-165596, CL-166125)
 
 Mods that break on the experimental branch, built against its own game files.
 
@@ -62,7 +62,7 @@ Mods that break on the experimental branch, built against its own game files.
 | --- | --- | --- | --- | --- |
 | `experimental/SeasonChallengesFix_P.pak` | The game crashes at launch: the mod ships release's season settings, which on experimental drop Season 7. Rebuilt on experimental's settings with the mod's one change, 5 active challenges. | Replacement | [Season Challenges Expanded](https://mod.io/g/drg/m/season-challenges-expanded) 1.2 | `75703545` |
 | `experimental/VanityEraserFix_P.pak` | The game crashes at load: the mod ships release's vanity settings (`GD_Vanity`), which on experimental drop the tattoo preview and two category icons. Experimental's settings with the mod's one change, no DLC-locked items. Checked on experimental: the game reaches the Space Rig with the mod and the fix. Read back in game, `GD_Vanity`'s `AlwaysLockedDLC` and the DLC items' restriction fields are empty; without the mod they hold the locks. The vanity screens are not yet looked at. | Patch over | [Vanity Restriction Eraser](https://mod.io/g/drg/m/vanity-restriction-eraser) 5.1.1 (5.0 too) | `d00aed0c` |
-| `experimental/AllCampaignsList_P.pak` | The mod's list of assignments is fixed at its build, so experimental's new ones (the four Proficiency Unlocks, Xmas 2026 and its Old Hats and Tattoo) do not show. Builds the board's side list at each Space Rig load from every campaign the game ships, so later ones show too; Retirement and class campaigns are left to the game. Also restores the 48 campaigns the game dropped (events since Xmas 2020, Seasons 2 to 5), rebuilt from their old files rather than shipped as copies; finished ones stay finished. Works alone, or with the original, which then also adds its own custom hat assignment. Checked in game: 108 assignments alone, 109 with the original, none twice. | Replacement or patch over | [All Previous Campaigns Available](https://mod.io/g/drg/m/all-previous-campaigns-available) 1.8.0 (checked with; current is 1.15.1) | `8d209153` |
+| `experimental/AllCampaignsList_P.pak` | The mod's list of assignments is fixed at its build, so experimental's new ones (the four Proficiency Unlocks, Xmas 2026 and its Old Hats and Tattoo) do not show. Builds the board's side list at each Space Rig load from every campaign the game ships, so later ones show too; Retirement and class campaigns are left to the game. Also restores the 50 campaigns the game dropped (events since Xmas 2020, Seasons 2 to 6, Relics of Hoxxes included), rebuilt from their old files rather than shipped as copies; finished ones stay finished. Works alone, or with the original, which then also adds its own custom hat assignment. Checked in game: 108 assignments alone, 109 with the original, none twice. | Replacement or patch over | [All Previous Campaigns Available](https://mod.io/g/drg/m/all-previous-campaigns-available) 1.8.0 (checked with; current is 1.15.1) | `0de6fdf8` |
 
 Notes:
 
